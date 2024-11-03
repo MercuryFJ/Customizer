@@ -65,6 +65,7 @@ allImages.forEach(img => {
     });
 });
 
+// --- FUNCTIONS ---
 // Function to update the main image and avatar.
 function updateImages(src) {
     mainImg.src = src;
