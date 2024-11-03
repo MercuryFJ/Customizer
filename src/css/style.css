@@ -1,0 +1,303 @@
+@font-face {
+  font-family: 'superMario';
+  src: url('../fonts/SuperMario256.ttf') format('truetype'),
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-customizer: #f5f5f5;
+  --accent-color: #f3d200;
+  --light-text-shadow: 2px 2px 2px white;
+  --shadow-text-spacing:  1px 1px 0px;
+}
+
+.customizer {
+  display: flex;
+  text-shadow: 3px 3px 0px black;
+  background-color: var(--bg-customizer);
+  padding: 10px;
+  border-radius: 15px;
+  border: 3px outset black;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url("../images/bg-mario.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+h1,
+h2,
+h3 {
+  text-shadow: var(--light-text-shadow);
+}
+
+h1 {
+  font-family: 'superMario', sans-serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  height: 20%;
+}
+
+h3 {
+  font-family: 'superMario', sans-serif;
+  font-size: 1.8rem;
+  position: absolute;
+  transform: translate(0px, 145px);
+}
+
+main {
+  display: flex;
+  height: 600px;
+  width: 850px;
+  border: solid 1px black;
+  background-color: wheat;
+  box-shadow: 2px 2px 14px;
+  border-radius: 15px;
+  border: 3px outset black;
+}
+
+#shirt-configuration {
+  display: flex;
+  flex-direction: column;
+  border: 2px inset black;
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  background-color: blanchedalmond;
+  border-radius: 15px;
+}
+
+#shirt-configuration>div {
+  margin-bottom: 10px;
+}
+
+#shirt-color,
+#shirt-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#shirt-title-container {
+  gap: 5px;
+}
+
+#shirt-title-container>label{
+  text-shadow: var(--light-text-shadow);
+}
+
+#title {
+  padding: 5px;
+  padding-left: 6px;
+}
+
+#title:focus {
+  background-color: #f3d200;
+}
+
+#images-container {
+  width: 100%;
+  height: 70%;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-top: 5px;
+  justify-content: space-evenly;
+  cursor: grab;
+}
+
+#images-container>div {
+  height: 30%;
+  width: 45%;
+  background-color: white;
+  margin-top: 5px;
+  border: 1px outset black;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 15px;
+}
+
+.image>img {
+  height: 100%;
+  width: 100%;
+}
+
+#shirt-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#shirt-img {
+  width: 100%;
+  filter: drop-shadow(0px 0px 10px black);
+  height: 90%;
+  padding: 40px;
+}
+
+#main-img {
+  position: absolute;
+  height: 200px;
+  transform: translate(0px, 5px);
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+#avatar-img {
+  position: absolute;
+  height: 75px;
+  transform: scaleX(-1) translate(-75px, -150px);
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+#shirt-title {
+  font-family: 'superMario', sans-serif;
+  position: absolute;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 0px;
+  color: #d3b700;
+  transform: translate(-80px, -150px);
+}
+
+.white {
+  color: var(--accent-color);
+  text-shadow: var(--shadow-text-spacing) white;
+}
+
+.black {
+  color: var(--accent-color);
+  text-shadow: var(--shadow-text-spacing) black;
+}
+
+input[type="range"] {
+  width: 200px;
+  height: 10px;
+  appearance: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  body{
+    width: 100%;
+    background-size: cover;
+  }
+  main {
+    flex-direction: column;
+    width: 417px;
+    height: auto;
+    padding: 10px;
+  }
+  
+  #shirt-configuration {
+    width: 100%; 
+    margin: 0; 
+    padding: 10px;
+    box-sizing: border-box; 
+  }
+  
+  #shirt-container {
+    width: 95%;
+    margin: 10px auto;
+  }
+  
+  .customizer {
+    font-size: 2rem;
+    margin: 10px;
+    justify-content: center;
+  }
+  
+  #images-container {
+    width: 100%;
+    height: 300px;
+    padding: 5px;
+    gap: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  #images-container > div {
+    height: 100px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #shirt-img {
+    padding: 1px;
+    height: auto;
+  }
+  
+  #main-img {
+    height: 150px;
+    transform: translate(0px, 0px);
+  }
+  
+  #avatar-img {
+    height: 60px;
+    transform: scaleX(-1) translate(-60px, -120px);
+  }
+  
+  #shirt-title {
+    font-size: 0.6rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+    transform: translate(0px, 100px);
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  #images-container {
+    height: 300px; 
+    padding: 10px;
+    gap: 10px;
+    overflow-y: auto; 
+    cursor: pointer;
+  }
+  #images-container > div {
+    height: 100px; 
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image > img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+}

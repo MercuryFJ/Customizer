@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./src/js/index.js" defer></script>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>Customizer</title>
+</head>
+
+<body>
+  <h1 class="customizer">
+    <span style="color: red">C</span>
+    <span style="color: green;">u</span>
+    <span style="color: yellow">s</span>
+    <span style="color: blue">t</span>
+    <span style="color: red">o</span>
+    <span style="color: green">m</span>
+    <span style="color: yellow">i</span>
+    <span style="color: blue">z</span>
+    <span style="color: red">e</span>
+    <span style="color: green">r</span>
+  </h1>
+  <main>
+    <div id="shirt-configuration">
+      <div id="shirt-title-container">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" placeholder="Your name...">
+      </div>
+      <div>
+        <input type="range" value="0" step="25" id="axis-x">
+        <input type="range" value="0" step="25" id="axis-y">
+      </div>
+      <div id="shirt-color">
+        <div>
+          <input type="radio" id="black" name="color">
+          <label for="black">Black</label>
+        </div>
+        <div>
+          <input type="radio" id="white" name="color" checked>
+          <label for="white">White</label>
+        </div>
+      </div>
+    
+      <label>Images (drag to t-shirt)</label>
+      <div id="images-container">
+        <div class="image"><img src="./src/images/mario.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/luigi.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/peach.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/estela.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/wario.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/waluigi.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/toad.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/toadette.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/daisy.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/yoshi.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/koopa.png" alt="" draggable="true"></div>
+        <div class="image"><img src="./src/images/drybones.png" alt="" draggable="true"></div>
+      </div>
+    </div>
+    <div id="shirt-container">
+      <img src="./src/images/t-shirt-white.png" alt="" id="shirt-img">
+      <img src="./src/images/default-img.png" alt="" id="main-img">
+      <img src="./src/images/default-img.png" alt="" id="avatar-img">
+      <span id="shirt-title" class="rangeX0 rangeY0">Your name</span>
+      <h3 class="black">Character</h3>
+      <h2>Custom your T-shirt</h2>
+    </div>
+  </main>
+</body>
+
+</html>
