@@ -18,23 +18,19 @@ const characterColors = {
     yoshi: "#70B921", koopa: "#FFCD00", drybones: "#95A4AE"
 };
 
+// --- CODE ---
+let targetImage = null;
+
 // --- EVENTS ---
-// Update the title of the T-shirt.
-inputTitle.addEventListener("keyup", () => {
-    title.textContent = inputTitle.value;
-});
-
-// These two events will update the position based on the value of the range input.
-inputRangeX.addEventListener('input', updatePosition);
-inputRangeY.addEventListener('input', updatePosition);
-
-// Drag and drop events for desktop.
-shirtContainer.addEventListener('dragover', (event) => {
-    if (!isMobileView()) event.preventDefault();
-});
-
-shirtContainer.addEventListener('drop', () => {
-    if (targetImage && !isMobileView()) updateImages(targetImage.src);
+// Event setup for images (click and dragstart).
+allImages.forEach(img => {
+    img.addEventListener('click', handleImageClick);
+    
+    img.addEventListener('dragstart', () => {
+        if (!isMobileView()) {
+            targetImage = img;
+        }
+    });
 });
 
 // Change the shirt color and text based on the selected radio button.
@@ -52,17 +48,22 @@ shirtRadios.forEach(radio => {
     });
 });
 
-let targetImage = null;
+// Update the title of the T-shirt.
+inputTitle.addEventListener("keyup", () => {
+    title.textContent = inputTitle.value;
+});
 
-// Event setup for images (click and dragstart).
-allImages.forEach(img => {
-    img.addEventListener('click', handleImageClick);
-    
-    img.addEventListener('dragstart', () => {
-        if (!isMobileView()) {
-            targetImage = img;
-        }
-    });
+// These two events will update the position based on the value of the range input.
+inputRangeX.addEventListener('input', updatePosition);
+inputRangeY.addEventListener('input', updatePosition);
+
+// Drag and drop events for desktop.
+shirtContainer.addEventListener('dragover', (event) => {
+    if (!isMobileView()) event.preventDefault();
+});
+
+shirtContainer.addEventListener('drop', () => {
+    if (targetImage && !isMobileView()) updateImages(targetImage.src);
 });
 
 // --- FUNCTIONS ---

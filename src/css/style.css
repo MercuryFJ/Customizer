@@ -20,7 +20,7 @@
   --shadow-text: 3px 3px 2px;
   --shadow-box: 2px 2px 2px;
   
-  /* T--- TYPOGRAPHY --- */
+  /* --- TYPOGRAPHY --- */
   --font-mario: 'superMario', sans-serif;
   --font-size-sm: 1rem;
   --font-size-lg: 2rem;
@@ -33,7 +33,7 @@
   box-sizing: border-box;
 }
 
-/*--- IDs ---*/
+/* --- IDs --- */
 #shirt-configuration {
   display: flex;
   flex-direction: column;
@@ -125,7 +125,7 @@
   transform: translate(-80px, -150px);
 }
 
-/*--- CSS CLASSES ---*/
+/* --- CSS CLASSES --- */
 .customizer {
   display: flex;
   text-shadow: var(--shadow-text) var(--color-border);
@@ -150,7 +150,7 @@
   width: 100%;
 }
 
-/*--- HTML TAGS ---*/
+/* --- HTML TAGS --- */
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -212,7 +212,7 @@ input[type="range"] {
   cursor: pointer;
 }
 
-/*--- RESPONSIVE DESIGN ---*/
+/* --- RESPONSIVE DESIGN --- */
 @media (max-width: 480px) {
   body {
     width: 100%;
